@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Arrays;
 import java.util.List;
-@RequestMapping("/orders")
+import org.springframework.http.MediaType;
+
+@RequestMapping(path="/orders", produces=MediaType.APPLICATION_JSON_VALUE)
 @RestController
 public class OrderController {
     private final List<Order> orders = Arrays.asList(
